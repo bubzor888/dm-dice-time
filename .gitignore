@@ -1,5 +1,12 @@
+#Local build stuff
 /bin/
 /build/
+
+#Ide stuff
+.settings/
+.gradle/
+.classpath
+.project
 
 # Compiled class file
 *.class
