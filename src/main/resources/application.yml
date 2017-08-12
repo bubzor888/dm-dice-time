@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: dm-dice-time
+
+---
+
+spring:
+  profiles:
+    active: cloud
+  data:
+    mongodb:
+      uri: mongodb://heroku_x74rcvpz:rtrvn07oevek0rgck39aq8mee6@ds161295.mlab.com:61295/heroku_x74rcvpz
+      
+---
+
+spring:
+  profiles:
+    active: local
+  data:
+    mongodb:
+      uri: mongodb://localhost/test
