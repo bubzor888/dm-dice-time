@@ -22,7 +22,7 @@ public class Manager {
 		
 		LOG.info("Reading {}", time);
 		
-		return time.getHours() + " hours have passed. Pool has " + time.getPool().totalDice() + " dice.";
+		return time.getHours() + " hours have passed.\n(Pool has " + time.getPool().totalDice() + " dice)";
 	}
 	
 	public String timePasses(String sessionId, Dice dice) {

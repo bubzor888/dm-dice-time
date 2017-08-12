@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.dm.tools.dicetime.entity.Time;
 
-public interface TimeRepository extends CrudRepository<Time, String> {
-		
+public interface PoolRepository extends CrudRepository<Time, Long> {
+
 }

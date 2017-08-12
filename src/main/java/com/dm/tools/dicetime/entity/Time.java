@@ -1,13 +1,20 @@
 package com.dm.tools.dicetime.entity;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToOne;
+import javax.persistence.Id;
 
+@Entity
 public class Time {
 
 	@Id
 	private String session;
 	
 	private int hours;
+	
+	@OneToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	private Pool pool;
 	
 	public Time() {}

@@ -1,10 +1,20 @@
 package com.dm.tools.dicetime.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Pool {
 
 	private static final int POOL_THRESHOLD = 6;
 	private static final int TARGET_NUMBER = 1;
 		
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
+	
 	private int d4;
 	private int d6;
 	private int d8;
@@ -70,6 +80,14 @@ public class Pool {
 		return String.format(
                 "Pool[d4=%s, d6=%s, d8=%s]",
                 d4, d6, d8);
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public int getD4() {
