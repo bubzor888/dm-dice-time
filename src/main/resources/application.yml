@@ -9,10 +9,7 @@ spring:
     active: cloud
   data:
     mongodb:
-      port: 61295
-      username: heroku_x74rcvpz
-      password: rtrvn07oevek0rgck39aq8mee6
-      uri: mongodb://heroku_x74rcvpz:rtrvn07oevek0rgck39aq8mee6@ds161295.mlab.com:61295/heroku_x74rcvpz
+      uri: $MONGOLAB_URI
       
 ---
 
